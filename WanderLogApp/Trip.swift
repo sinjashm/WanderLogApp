@@ -28,7 +28,8 @@ enum TripCategory: String, CaseIterable, Identifiable {
     }
 }
 
-struct Trip: Identifiable, Equatable {
+struct Trip: Identifiable {
+        
     let id: UUID
     var title: String
     var notes: String
@@ -67,5 +68,30 @@ struct Trip: Identifiable, Equatable {
         if city.isEmpty { return country }
         if country.isEmpty { return city }
         return "\(city), \(country)"
+    }
+}
+
+extension Trip {
+    init(entity: TripEntity) {
+        self.id = entity.id ?? UUID()
+        self.title = entity.title ?? "Untitled Trip"
+        self.notes = entity.notes ?? ""
+        self.dateVisited = entity.dateVisited ?? Date()
+        let rawCat = entity.category ?? TripCategory.other.rawValue
+        self.category = TripCategory(rawValue: rawCat) ?? .other
+        self.rating = Int(entity.rating)
+        self.city = entity.city ?? ""
+        self.country = entity.country ?? ""
+
+        if entity.latitude != 0 || entity.longitude != 0 {
+            self.coordinate = CLLocationCoordinate2D(
+                latitude: entity.latitude,
+                longitude: entity.longitude
+            )
+        } else {
+            self.coordinate = nil
+        }
+
+        self.image = nil 
     }
 }

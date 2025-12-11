@@ -9,16 +9,22 @@ import SwiftUI
 
 @main
 struct WanderLogAppApp: App {
-    @StateObject private var tripStore = TripStore()
-    @StateObject private var locationManager = LocationManager()
     let persistenceController = PersistenceController.shared
 
-    var body: some Scene {
-        WindowGroup {
-            RootTabView()
-                            .environmentObject(tripStore)
-                            .environmentObject(locationManager)
+        @StateObject private var tripStore: TripStore
+        @StateObject private var locationManager = LocationManager()
 
+        init() {
+            let context = persistenceController.container.viewContext
+            _tripStore = StateObject(wrappedValue: TripStore(context: context))
+        }
+
+        var body: some Scene {
+            WindowGroup {
+                RootTabView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environmentObject(tripStore)
+                    .environmentObject(locationManager)
+            }
         }
     }
-}
