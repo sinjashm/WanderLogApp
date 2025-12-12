@@ -59,7 +59,6 @@ struct CardTripView: View {
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            // Background – placeholder gradient for now
             LinearGradient(
                 colors: [.blue.opacity(0.8), .purple.opacity(0.8)],
                 startPoint: .topLeading,

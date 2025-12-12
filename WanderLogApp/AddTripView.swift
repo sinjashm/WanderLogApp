@@ -42,10 +42,14 @@ struct AddTripView: View {
                     Button {
                         locationManager.requestPermission()
                         locationManager.fetchLocation()
-                        city = locationManager.currentCity
-                        country = locationManager.currentCountry
                     } label: {
                         Label("Use My Current Location", systemImage: "location.circle")
+                    }
+                    .onChange(of: locationManager.currentCity) { _, newCity in
+                        if !newCity.isEmpty { city = newCity }
+                    }
+                    .onChange(of: locationManager.currentCountry) { _, newCountry in
+                        if !newCountry.isEmpty { country = newCountry }
                     }
                 }
 
