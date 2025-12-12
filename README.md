@@ -145,3 +145,22 @@ Trip of the Day widget.
 1. Clone the project:
    ```bash
    git clone https://github.com/your-username/WanderLog.git
+   ```
+
+2. Open in Xcode:
+   ```bash
+      open WanderLog.xcodeproj
+   ```
+
+3. Run the app:
+```bash
+   Scheme → WanderLogApp → iPhone 15 Simulator
+   ```
+
+4. To test the widget:
+   ```bash
+   Scheme → WanderLogWidgetExtension
+   ```
+
+
+Add the widget from the "+" menu on the simulator.
