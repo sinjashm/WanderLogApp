@@ -52,11 +52,21 @@
 			);
 			target = E3F247D42EEB3FA1003C112C /* WanderLogWidgetExtension */;
 		};
+		E3F247EE2EEC9542003C112C /* Exceptions for "WanderLogApp" folder in "WanderLogApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E3F247992EEB3140003C112C /* WanderLogApp */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E3F2479C2EEB3140003C112C /* WanderLogApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E3F247EE2EEC9542003C112C /* Exceptions for "WanderLogApp" folder in "WanderLogApp" target */,
+			);
 			path = WanderLogApp;
 			sourceTree = "<group>";
 		};
@@ -379,6 +389,8 @@
 				DEVELOPMENT_TEAM = K55R392JXG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WanderLogApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to autofill city and country for trips.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +419,8 @@
 				DEVELOPMENT_TEAM = K55R392JXG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WanderLogApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to autofill city and country for trips.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
