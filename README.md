@@ -115,18 +115,24 @@ TODO
 
 ### Home Screen  
 Animated card layout with scroll transitions.
+<img width="456" height="830" alt="Screenshot 2025-12-12 at 13 06 15" src="https://github.com/user-attachments/assets/89a9e769-8f78-436c-9bb9-4ccef57cc868" />
 
 ### Trips Screen  
 Sticky header showing stats + trip list.
+<img width="445" height="825" alt="Screenshot 2025-12-12 at 13 06 44" src="https://github.com/user-attachments/assets/33e3ac39-79b0-43a0-807a-4991e92fbbba" />
+
 
 ### Add Trip  
 Form for entering trip details with “Use My Location”.
+<img width="496" height="835" alt="Screenshot 2025-12-12 at 13 06 54" src="https://github.com/user-attachments/assets/608a0168-c679-476f-bb2f-eea734a1c615" />
 
 ### Trip Detail  
 Full details including rating, date, location, and notes.
+<img width="398" height="818" alt="Screenshot 2025-12-12 at 13 07 15" src="https://github.com/user-attachments/assets/5896677c-bc23-4113-9e3f-56fc7ad45612" />
 
 ### Widget  
 Trip of the Day widget.
+<img width="494" height="807" alt="Screenshot 2025-12-12 at 13 07 39" src="https://github.com/user-attachments/assets/9e14b65f-acfe-41e4-81d3-5473d66966d5" />
 
 
 ### Requirements
